@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: 0 0% 100%;          /* White */
+    --foreground: 210 8% 15%;         /* Dark text */
+    --card: 0 0% 100%;               /* Same as background */
+    --card-foreground: 210 8% 15%;   /* Dark text on card */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 8% 15%;
+
+    /*
+      Use navy/gold for brand-like elements in light mode,
+      but toned down to keep the overall interface light.
+    */
+    --primary: 220 35% 20%;          /* Dark navy accent in light mode */
+    --primary-foreground: 210 40% 98%; /* White text on navy accent */
+    --secondary: 49 100% 55%;        /* Gold accent in light mode */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 49 100% 55%;           /* Gold used as an accent */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode - Current color scheme from screenshot */
+    --background: 221 100% 12.5%;    /* Navy (#001440) */
+    --foreground: 51 100% 50%;       /* Gold (#FFD700) */
+    --card: 221 100% 12.5%;          /* Same as background */
+    --card-foreground: 51 100% 50%;  /* Gold text on navy card */
+    --popover: 221 100% 12.5%;
+    --popover-foreground: 51 100% 50%;
+
+    /*
+      Navy as background, gold as main text. 
+      For smaller accent areas, you can either keep them the same 
+      or slightly invert them for contrast. 
+    */
+    --primary: 51 100% 50%;          /* Gold primary */
+    --primary-foreground: 0 0% 0%;   /* Black text on gold */
+    --secondary: 221 100% 12.5%;     /* Navy as secondary accent */
+    --secondary-foreground: 210 40% 98%; /* Light text on navy */
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 51 100% 50%;           /* Gold accent */
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
